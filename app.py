@@ -179,14 +179,16 @@ try:
 except RuntimeError:
     asyncio.set_event_loop(asyncio.new_event_loop())
 @st.cache_resource(show_spinner=True)
-def build_vectorstore(_api_key: str, _salary_doc, _insurance_doc):
+from langchain_community.embeddings import HuggingFaceEmbeddings
+
+def build_vectorstore(_salary_doc, _insurance_doc):
     splitter = RecursiveCharacterTextSplitter(chunk_size=800, chunk_overlap=100)
     docs = splitter.split_documents([_salary_doc, _insurance_doc])
 
-    embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001", google_api_key=_api_key)
+    embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
     vs = FAISS.from_documents(docs, embeddings)
-    retriever = vs.as_retriever(search_kwargs={"k": 4})
-    return retriever
+    return vs.as_retriever(search_kwargs={"k": 4})
+
 
 if "retriever" not in st.session_state or build_btn:
     
