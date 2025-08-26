@@ -6,12 +6,16 @@ from typing import List, Tuple
 import streamlit as st
 from dotenv import load_dotenv
 
-from langchain_core.documents import Document 
+from langchain_core.documents import Document
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import FAISS
 from langchain_google_genai import ChatGoogleGenerativeAI, GoogleGenerativeAIEmbeddings
 from langchain.prompts import PromptTemplate
 from langchain.chains import RetrievalQA
+
+
+from langchain_community.embeddings import HuggingFaceEmbeddings
+
 
 st.set_page_config(page_title="Multi-Agent RAG: Salary & Insurance", page_icon="🤖", layout="wide")
 st.title("🤖 Multi-Agent RAG • ")
@@ -179,7 +183,7 @@ try:
 except RuntimeError:
     asyncio.set_event_loop(asyncio.new_event_loop())
 @st.cache_resource(show_spinner=True)
-from langchain_community.embeddings import HuggingFaceEmbeddings
+
 
 def build_vectorstore(_salary_doc, _insurance_doc):
     splitter = RecursiveCharacterTextSplitter(chunk_size=800, chunk_overlap=100)
