@@ -16,7 +16,7 @@ or Windows:
   setx GOOGLE_API_KEY "your_api_key_here"
 """
 
-from _future_ import annotations
+from __future__ import annotations
 import os
 import textwrap
 from typing import Dict, List, Optional, Tuple
@@ -59,7 +59,7 @@ INSURANCE_KEYWORDS = {
 
 # ---------- Simple dataclass-like container ----------
 class DomainStores:
-    def _init_(self, salary: Optional[FAISS] = None, insurance: Optional[FAISS] = None):
+    def __init__(self, salary: Optional[FAISS] = None, insurance: Optional[FAISS] = None):
         self.salary = salary
         self.insurance = insurance
 
