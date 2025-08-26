@@ -1,5 +1,4 @@
 import os
-from typing import List
 import streamlit as st
 from dotenv import load_dotenv
 from langchain_core.documents import Document
@@ -50,6 +49,19 @@ def read_txt_file(file, fallback_text: str, name: str) -> Document:
         return Document(page_content=fallback_text, metadata={"source": name})
 
 # -----------------------------
+# Load documents first
+# -----------------------------
+if salary_file is None and not use_samples:
+    st.error("Please upload salary.txt or enable 'Use sample content'.")
+    st.stop()
+if insurance_file is None and not use_samples:
+    st.error("Please upload insurance.txt or enable 'Use sample content'.")
+    st.stop()
+
+salary_doc = read_txt_file(salary_file, SAMPLE_SALARY, "salary.txt")
+insurance_doc = read_txt_file(insurance_file, SAMPLE_INSURANCE, "insurance.txt")
+
+# -----------------------------
 # Build vectorstore
 # -----------------------------
 @st.cache_resource(show_spinner=True)
@@ -67,20 +79,8 @@ def build_vectorstore(_api_key: str, salary_text: str, insurance_text: str):
     except Exception:
         embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
         vs = FAISS.from_documents(split_docs, embeddings)
+
     return vs.as_retriever(search_kwargs={"k": 4})
-
-# -----------------------------
-# Load Documents
-# -----------------------------
-if salary_file is None and not use_samples:
-    st.error("Please upload salary.txt or enable 'Use sample content'.")
-    st.stop()
-if insurance_file is None and not use_samples:
-    st.error("Please upload insurance.txt or enable 'Use sample content'.")
-    st.stop()
-
-salary_doc = read_txt_file(salary_file, SAMPLE_SALARY, "salary.txt")
-insurance_doc = read_txt_file(insurance_file, SAMPLE_INSURANCE, "insurance.txt")
 
 if "retriever" not in st.session_state or build_btn:
     with st.spinner("Building vector store..."):
@@ -206,3 +206,5 @@ if query:
                         st.code(d.page_content.strip()[:1000], language="text")
 
     st.session_state.messages.append({"role": "assistant", "content": f"**Handled by:** `{agent_name}`\n\n{answer}"})
+
+
