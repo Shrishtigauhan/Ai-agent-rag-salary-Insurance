@@ -46,16 +46,131 @@ def read_txt_file(file, fallback_text: str, name: str) -> Document:
     else:
         return Document(page_content=fallback_text, metadata={"source": name})
 
-SAMPLE_SALARY = """Salary Structure:
-- Monthly salary is base pay per month.
-- Annual salary = monthly salary × 12.
-- Deductions may include tax, provident fund, and other statutory deductions.
+SAMPLE_SALARY = """
+Salary Structure (India Example):
+
+1. **Basic Pay**
+   - The fixed component of salary; usually 35–50% of CTC.
+   - Forms the basis for calculating allowances and deductions.
+
+2. **Allowances**
+   - **HRA (House Rent Allowance):** Paid if employee lives in rented accommodation. Tax exemption depends on salary, rent paid, and city.
+   - **DA (Dearness Allowance):** Adjustment for inflation, more common in govt/public sector jobs.
+   - **Conveyance Allowance:** For travel between home and office.
+   - **Medical Allowance:** For medical expenses, sometimes requires bills.
+   - **Special Allowance / Performance Allowance:** Variable or discretionary.
+
+3. **Gross Salary**
+   - Formula: Basic Pay + All Allowances + Bonus + Other Benefits.
+
+4. **Deductions**
+   - **Income Tax (TDS):** Based on annual taxable income.
+   - **Provident Fund (PF):** 12% of Basic Pay from employee; employer also contributes.
+   - **Professional Tax:** Levied by some states.
+   - **Employee State Insurance (ESI):** For employees earning below a certain threshold.
+   - **Other deductions:** Loan EMI, advances, etc.
+
+5. **Net Salary (In-hand Salary)**
+   - Formula: Gross Salary – Deductions.
+   - This is what gets credited to bank account monthly.
+
+6. **Annual Salary**
+   - Formula: Monthly Salary × 12.
+   - Includes fixed and some variable components.
+
+7. **CTC (Cost to Company)**
+   - The total annual cost the employer spends on an employee.
+   - Includes Gross Salary + Employer Contributions (PF, Gratuity, Insurance premiums, Stock Options).
+   - CTC is usually higher than in-hand salary.
+
+8. **Bonus & Incentives**
+   - Performance Bonus (annual or quarterly).
+   - Joining Bonus, Retention Bonus, Referral Bonus.
+
+9. **Gratuity**
+   - A lump-sum benefit paid if the employee works 5+ years in the company.
+   - Formula (basic): (15 × last drawn salary × years of service) / 26.
+
+10. **Example Salary Calculation**
+    - Monthly Salary (CTC) = ₹80,000
+      • Basic Pay = ₹32,000
+      • HRA = ₹16,000
+      • Allowances = ₹12,000
+      • Bonus (monthly avg) = ₹5,000
+    - Gross = ₹65,000
+    - Deductions:
+      • PF (Employee) = ₹3,840
+      • Tax (TDS) = ₹5,000
+      • Professional Tax = ₹200
+    - Net (In-hand) = ~₹56,000
+    - Annual CTC = ₹9.6 lakh
+    - Annual In-hand = ~₹6.7 lakh
+
+11. **Key Salary FAQs**
+    - Difference between Gross & Net? → Deductions.
+    - Why is CTC higher than In-hand? → Includes employer contributions, not directly received.
+    - What deductions are mandatory? → Income Tax, PF, ESI (if eligible).
 """
-SAMPLE_INSURANCE = """Insurance Policy Basics:
-- Coverage includes hospitalization, outpatient, and emergency services depending on plan.
-- Premium is the amount you pay periodically (monthly/annual).
-- Claims can be cashless (network hospitals) or reimbursement (submit bills).
+
+SAMPLE_INSURANCE = """
+Insurance Policy Basics:
+
+1. **Health Insurance**
+   - Covers hospitalization, outpatient, and emergency medical care.
+   - Types:
+     • Individual Plan – covers one person.
+     • Family Floater Plan – covers all family members under single sum insured.
+     • Group Health Insurance – usually offered by employer.
+   - Coverage:
+     • Room rent, ICU charges, surgery, doctor’s fees, medicines.
+     • Pre- and post-hospitalization expenses (usually 30 & 60 days).
+   - Claims:
+     • Cashless (network hospital directly settles).
+     • Reimbursement (pay and then claim back).
+   - Exclusions:
+     • Cosmetic surgery, experimental treatment, self-inflicted injuries.
+     • Pre-existing conditions excluded for 2–4 years (varies by policy).
+   - Example: Premium ₹15,000/year for ₹5 lakh coverage for family of 4.
+
+2. **Life Insurance**
+   - Provides financial support to nominee in case of policyholder’s death.
+   - Types:
+     • Term Plan – Pure risk cover; cheapest and highest coverage.
+     • Endowment Plan – Insurance + savings, lower coverage.
+     • ULIP – Insurance + investment linked to market funds.
+   - Example: Term plan premium ₹12,000/year for ₹1 crore sum assured.
+
+3. **Motor Insurance**
+   - Mandatory by law for all vehicles.
+   - Types:
+     • Third-Party Liability – Covers damage to other people/property.
+     • Comprehensive – Covers own vehicle + third-party liability.
+   - Add-ons: Zero depreciation cover, roadside assistance, engine protection.
+
+4. **Travel Insurance**
+   - Covers medical emergencies, baggage loss, trip cancellation during travel.
+   - Usually short-term; required for visa in many countries.
+
+5. **General Insurance vs Life Insurance**
+   - General: Covers assets (health, car, home, travel), usually 1-year renewable.
+   - Life: Long-term protection; payout happens on death/maturity.
+
+6. **Premiums**
+   - Depends on age, coverage amount, type of plan, health history.
+   - Paid monthly, quarterly, or annually.
+
+7. **Claim Settlement Ratio (CSR)**
+   - Important metric to choose insurer.
+   - CSR = (Claims settled ÷ Total claims received) × 100.
+   - Higher ratio → more reliable insurer.
+
+8. **Key Insurance FAQs**
+   - What is waiting period? → Initial time (e.g., 30 days or 2–4 years for pre-existing conditions).
+   - Can I have multiple policies? → Yes, claims can be made proportionally.
+   - What is co-pay? → Percentage of bill that policyholder must bear.
+   - Is tax benefit available? → Yes, premiums eligible for tax deduction under Section 80C (life) and 80D (health).
 """
+
 
 import asyncio
 
