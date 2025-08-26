@@ -183,16 +183,32 @@ try:
 except RuntimeError:
     asyncio.set_event_loop(asyncio.new_event_loop())
 @st.cache_resource(show_spinner=True)
+def build_vectorstore(_api_key: str, salary_text: str, insurance_text: str):
+    # Convert text into LangChain Documents inside cache
+    from langchain_core.documents import Document
+    docs = [
+        Document(page_content=salary_text, metadata={"source": "salary"}),
+        Document(page_content=insurance_text, metadata={"source": "insurance"})
+    ]
 
-
-def build_vectorstore(_salary_doc, _insurance_doc):
     splitter = RecursiveCharacterTextSplitter(chunk_size=800, chunk_overlap=100)
-    docs = splitter.split_documents([_salary_doc, _insurance_doc])
+    split_docs = splitter.split_documents(docs)
 
-    embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
-    vs = FAISS.from_documents(docs, embeddings)
+    try:
+        embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001", google_api_key=_api_key)
+        vs = FAISS.from_documents(split_docs, embeddings)
+    except Exception as e:
+        st.warning(f"⚠️ Gemini embeddings failed ({e}). Falling back to HuggingFace.")
+        embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
+        vs = FAISS.from_documents(split_docs, embeddings)
+
     return vs.as_retriever(search_kwargs={"k": 4})
 
+st.session_state.retriever = build_vectorstore(
+    api_key,
+    salary_doc.page_content,
+    insurance_doc.page_content
+)
 
 if "retriever" not in st.session_state or build_btn:
     
