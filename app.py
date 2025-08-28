@@ -1,19 +1,3 @@
-# app.py
-# Streamlit Multi-Agent RAG (Salary + Insurance) with Google Generative AI (Gemini)
-# - Single-file app with chat + tools (retrieval) + memory
-# - Two specialist agents (Salary, Insurance) share the same vector store (RAG)
-# - A coordinator routes questions to the right agent using a lightweight LLM classifier
-#
-# How to run:
-#   1) pip install -U streamlit langchain langchain-community langchain-text-splitters \
-#          langchain-google-genai faiss-cpu python-dotenv
-#   2) Set GOOGLE_API_KEY in a .env file or paste in the sidebar
-#   3) Place your salary.txt and insurance.txt somewhere, or upload them via sidebar
-#   4) streamlit run app.py
-#
-# Notes:
-# - Safe defaults are provided if you don't upload files yet.
-# - Memory is maintained per-session with Streamlit's session_state.
 
 import os
 from io import StringIO
