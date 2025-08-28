@@ -135,3 +135,250 @@ Labour Welfare Fund         As per state slabs
 For Higher-Income Employees: Add Mobile, Driver Salary, Books/Periodicals, Car Maintenance (within exemption limits).
 
 =================================================================
+What Is Salary Structure And How To Make One (With Samples)
+Written by
+Updated 30 April 2025
+
+When paying salaries to employees, companies generally use a salary structure to ensure fairness and compliance in compensation. It ensure pay parity between employees working in the same role and position. By understanding how employers use such a structure to organise payments, you can find the minimum and maximum earning potential for a specific job role and make better career decisions.
+In this article, we describe what a salary structure is, explain how to calculate it, look at its different components and demonstrate how to make one.
+
+What Is A Salary Structure?
+It is a payment structure that comprises different components of the total compensation package that a company offers to an employee. The company uses a salary structure to determine how much salary it is required to pay the employee. A salary structure may have pay grades with minimum, middle and maximum salary ranges. An employee's educational qualifications, skills, work experience and job responsibilities, are some of the factors that may determine their pay grade. By understanding the salary structure for a role, employees can find out how much they can potentially earn and negotiate their salaries better.
+
+What Are The Components Of A Salary Structure?
+The components of a salary structure help companies to make the right payment to their employees. They may vary for different employers, but some basic ones are as follows:
+- Cost to Company (CTC): It is the total amount that the company directly or indirectly spends on an employee as their salary package.
+- Basic pay or salary: This is a fixed, taxable amount that is 40-45% of the CTC and forms the base pay before allowances or deductions.
+- Gross salary: Salary amount before taxes and any deductions.
+- Net salary: Take-home salary after deductions.
+- Allowance: Additional payments like DA, HRA, LTA, medical, travel, etc.
+- Performance bonus and incentives.
+- Employee Provident Fund (EPF).
+- Employees' State Insurance Corporation (ESIC).
+- Labour welfare fund.
+- Professional tax.
+- Gratuity.
+
+What Are The Types Of Salary Structures?
+1. Top-down salary structure: Add assigned salary components to get gross salary.
+2. Bottom-up salary structure: Start with gross salary and break into components.
+
+What Are The Methods For Defining Salary Components?
+- Lump sum method
+- Condition-based method
+- Variable method
+
+How Is A Salary Structure Calculated?
+1. Find total earnings (basic + allowances).
+2. Calculate total deductions (TDS, PF, tax, etc.).
+3. Add gross salary.
+4. Subtract deductions to get net salary.
+
+Tips For Making A Salary Structure:
+- Maximise employee savings with tax-efficient structure.
+- Reduce employer's tax liability.
+- Ensure compliance with regulations.
+
+Salary Structure Sample:
+CTC = gross salary + EPF + health insurance = ₹12,11,200 + ₹1,11,451.2 + ₹177348.8 = ₹15,00,000 per year
+Basic = 40% of CTC = ₹5,99,200 per year
+DA = 55% of basic = ₹3,29,560 per year
+HRA = 50% of basic = ₹2,99,600 per year
+Health insurance = ₹177,348.8 per year
+Allowances = ₹6,12,000 per year
+Gross salary = ₹12,11,200
+TDS = ₹1,21,120 per year
+EPF = ₹1,11,451.2 per year
+Total deductions = ₹2,34,971.2 per year
+Net salary = ₹9,76,228.8 per year
+
+
+=================================================================
+Note: The salary structures is updated effective FY 2025-2026.
+=================================================================
+
+Fixed Salary Component   CTC Up to 5 Lakhs   CTC from 5 to 10 Lakhs   CTC Above 10 Lakhs   PF   PT   ESIC   LWF
+Basic   50% of CTC or Minimum Wage as complied by State   50% of CTC   50% of CTC   Yes   Yes   Yes   Yes
+HRA   50% of Basic   50% of Basic   50% of Basic   No   Yes   Yes   Yes
+Education Allowance   200 Fixed   200 Fixed   200 Fixed   Yes   Yes   Yes   Yes
+LTA   15% of Taxable   15% of Taxable   15% of Taxable   Yes   Yes   Yes   Yes
+Special Allowance   Balancing Figure   Balancing Figure   Balancing Figure   Yes   Yes   Yes   Yes
+Telephone & Internet Reimbursement   1000 Fixed   2000 Fixed   3000 Fixed   No   No (taxable portion subject to PT)   No   No
+Car & Driver Reimbursement (Applicable to those who owns motor car)   Not Applicable   Not Applicable   Fuel & Maintenance- 1800 (upto 1.6lt engine) / 2400 (above 1.6lt) + Driver 900 Fixed   No   No (taxable portion subject to PT)   No   No
+Meal Coupon   Not Applicable   2000 Fixed   2000 Fixed   NA   NA   NA   NA
+Books & Periodicals   Not Applicable   1000 Fixed   2000 Fixed   No   No (taxable portion subject to PT)   No   No
+PF Employer   Rs. 1800/- p.m.   Rs. 1800/- p.m.   Rs. 1800/- p.m.   NA   NA   NA   NA
+ESIC Employer   3.25% of Gross Salary   Not Applicable   Not Applicable   NA   NA   NA   NA
+
+=================================================================
+Key Notes for Employees (Tax Benefits & Declarations)
+=================================================================
+
+Basic: Fully Taxable.  
+HRA: Submit rent receipts, leave & license agreement, landlord PAN if rent > 1 lakh annually, address proof if possible. Declaration on Quikchex ESS portal before 25th April 2025. Proofs to HR by 15th Jan 2025 or at FnF settlement.  
+Education Allowance: Exempt ₹100/month per child (max 2). Submit child details at declaration, fee receipts at proof submission time.  
+LTA: Exempt for 2 journeys in block (2023-2026). Domestic only. Proof: Tickets, boarding pass, travel agent bills. Declare on Quikchex portal before 25th April 2025, proofs by 15th Jan 2025 or at FnF settlement.  
+Special Allowance: Fully taxable.  
+Telephone & Internet: Employee’s name on bill. Submit original/e-bills for reimbursement (twice annually: Sept 2025 and March 2026).  
+Car & Driver: Vehicle in employee’s name, maintain logbook, submit RC, petrol/toll/driver receipts. Applicable only to 4-wheelers.  
+Meal Coupons: Via food wallet/coupons, ensure IT eligibility.  
+Books & Periodicals: Bills for newspapers, journals, books related to work.  
+PF Employer: Not applicable for tax exemption.  
+ESIC Employer: Applicable where gross salary ≤ ₹21,000.  
+
+=================================================================
+Deductions (Impact on Take-home Salary)
+=================================================================
+
+Provident Fund: 12% of Basic+DA+Special (both employer & employee). Mandatory for companies >20 employees if Basic+DA+Special < ₹15,000.  
+ESIC: Employer 3.25% of Gross, Employee 0.75% if Gross ≤ ₹21,000. Applicable for firms with ≥10 employees.  
+Professional Tax: State-specific, capped at ₹2,500/year.  
+Labour Welfare Fund: State-specific, semi-annual contribution.  
+
+=================================================================
+Objectives of a Perfect Salary Structure
+=================================================================
+
+1) Tax Efficient – Allows maximum employee savings.  
+2) Reduce Employer’s Liability – Control PF, ESIC, gratuity exposure.  
+3) Compliant – Meets minimum wage, PF, ESIC norms.  
+
+=================================================================
+Component-wise Deep Dive
+=================================================================
+
+Basic + DA: Core of salary (Basic = 50% CTC, DA ≈ 5% CTC). Impacts PF, ESIC, gratuity.  
+HRA: 40% of Basic+DA in non-metros, 50% in metros. Tax exemption under Old Regime.  
+LTA: Covers domestic travel fare (employee + family). Proof of travel required.  
+Special Allowance: Fully taxable, balancing component.  
+Other Allowances: Medical & Conveyance exemptions removed since April 2018 (standard deduction replaced).  
+Child Education Allowance: Exempt ₹100/month per child (max 2).  
+
+=================================================================
+Ideal Salary Structure (Recommended)
+=================================================================
+
+Component                  Recommendation  
+Basic                      50% of CTC  
+DA                         5% of CTC  
+HRA                        50% of Basic+DA (metro), 40% (non-metro)  
+LTA                        ~10% of Basic (or balancing)  
+ESIC (Employer)            3.25% of Gross  
+ESIC (Employee)            0.75% of Gross  
+PF (Employer & Employee)   12% of Basic+DA  
+Professional Tax            As per state slabs  
+Labour Welfare Fund         As per state slabs  
+
+For Higher-Income Employees: Add Mobile, Driver Salary, Books/Periodicals, Car Maintenance (within exemption limits).
+
+=================================================================
+Salary Structure Comprehensive Guide
+
+A salary is the fixed regular payment made by an employer to an employee for services rendered. Understanding salary structure is crucial for both employees and employers to ensure transparency, compliance, and financial planning.
+
+1. Components of Salary:
+Salaries are typically divided into several components:
+- Basic Salary: The core part of the salary, usually forming 40-50% of the total compensation. It forms the basis for other allowances and deductions.
+- House Rent Allowance (HRA): Paid to employees to meet rental expenses. Exemptions apply under income tax laws based on actual rent paid and city of residence.
+- Dearness Allowance (DA): Provided to government employees and some private sector workers to offset inflation.
+- Conveyance/Transport Allowance: Covers daily travel expenses to and from work.
+- Medical Allowance: Paid to cover routine medical expenses.
+- Special Allowances: Any extra payments given for job-specific requirements.
+- Bonus/Incentives: Performance-based payments that reward employees for achieving targets.
+
+2. Gross vs Net Salary:
+- Gross Salary: Total earnings before deductions. This includes basic pay, allowances, overtime, and bonuses.
+- Net Salary (Take-home pay): Amount received after all statutory and voluntary deductions.
+Formula: Net Salary = Gross Salary − Deductions.
+
+3. Deductions:
+Mandatory and optional deductions reduce gross salary to net salary:
+- Income Tax: Deducted at source based on applicable tax slab.
+- Provident Fund (PF): Contribution towards retirement savings (both employer and employee contribute a fixed percentage).
+- Professional Tax: Levied by state governments in India.
+- Insurance Premiums: Deducted if employer provides health/life insurance.
+- Loan EMIs: If employees have loans through the employer.
+
+4. Annual Salary Calculation:
+Annual salary is calculated by multiplying monthly salary by 12, plus applicable annual bonuses. For example:
+Monthly salary = ₹50,000 → Annual salary = ₹50,000 × 12 = ₹6,00,000.
+If deductions are ₹5,000 monthly, then net annual salary = (₹50,000 − ₹5,000) × 12 = ₹5,40,000.
+
+5. Pay Slips:
+A salary slip is a monthly statement showing the breakdown of earnings and deductions. It is essential for:
+- Loan and credit applications.
+- Proof of income.
+- Filing income tax returns.
+
+6. Cost to Company (CTC):
+CTC includes total salary plus additional benefits provided by the employer, such as:
+- Employer’s PF contribution.
+- Gratuity.
+- Medical insurance premiums.
+- Food coupons, company car, and other perks.
+CTC is usually higher than the actual take-home pay.
+
+7. Allowances and Taxation:
+- HRA exemption depends on rent paid, salary structure, and location (metro or non-metro).
+- Leave Travel Allowance (LTA): Covers travel expenses for vacations, subject to tax exemptions.
+- Special allowances are usually fully taxable.
+
+8. Salary Negotiation:
+Employees should consider both fixed and variable components while negotiating.
+- Emphasize basic pay growth, as it impacts retirement savings and benefits.
+- Compare offers on CTC vs actual take-home.
+
+9. Payroll Cycle:
+Salaries are generally paid monthly. Payroll involves calculating earnings, applying deductions, and transferring net pay to employees’ bank accounts. Employers must comply with local labor laws regarding timely payment.
+
+10. Importance of Understanding Salary:
+- Helps employees manage personal finances effectively.
+- Ensures transparency in compensation.
+- Aids employers in structuring competitive packages to attract and retain talent.
+
+In conclusion, salary is not just a simple number but a structured combination of various components, allowances, and deductions. Knowing how gross and net salary are calculated helps employees plan better and employers maintain compliance and fairness.
+Salary Structure Comprehensive Guide
+
+A salary is the fixed regular payment made by an employer to an employee for services rendered. Understanding salary structure is crucial for both employees and employers to ensure transparency, compliance, and financial planning.
+
+1. Components of Salary:
+Salaries are typically divided into several components:
+- Basic Salary: The core part of the salary, usually forming 40-50% of the total compensation. It forms the basis for other allowances and deductions.
+- House Rent Allowance (HRA): Paid to employees to meet rental expenses. Exemptions apply under income tax laws based on actual rent paid and city of residence.
+- Dearness Allowance (DA): Provided to government employees and some private sector workers to offset inflation.
+- Conveyance/Transport Allowance: Covers daily commuting expenses between home and office.
+- Special Allowances: Variable allowances given at the employer’s discretion.
+- Bonuses and Incentives: Performance-based or company-wide rewards to motivate employees.
+
+2. Deductions:
+- Provident Fund (PF): A compulsory retirement savings scheme where both employee and employer contribute a percentage of basic salary.
+- Professional Tax: Levied by some state governments in India, deducted from the salary.
+- Income Tax (TDS): Employers deduct tax at source based on the employee’s applicable tax slab.
+- Other deductions: Loan EMIs, advances, or company-specific deductions.
+
+3. Annual Salary Calculation:
+The annual salary is generally the sum of all monthly salary components multiplied by 12. For example, Annual Salary = (Basic + Allowances – Deductions) × 12.
+
+4. Salary Slips:
+Salary slips are official documents issued monthly by employers that detail the breakdown of earnings and deductions. They are useful for applying for loans, credit cards, or proving income.
+
+5. Importance of Understanding Salary:
+- Financial Planning: Helps employees manage expenses, savings, and investments.
+- Tax Planning: Employees can use exemptions (like HRA, leave travel allowance) to save taxes.
+- Transparency: Clear breakdown builds trust between employer and employee.
+
+---
+Sample Questions and Answers:
+
+Q: How do I calculate my annual salary?
+A: Multiply your monthly salary (basic + allowances – deductions) by 12 to get your annual salary.
+
+Q: What is included in my salary slip?
+A: Salary slips usually contain basic pay, HRA, DA, allowances, bonuses, and deductions like PF and tax.
+
+Q: Why is HRA important?
+A: HRA helps employees cover rent expenses and also provides tax-saving benefits under income tax laws.
+
+Q: What are common deductions from salary?
+A: Provident Fund, Professional Tax, and Income Tax are the most common deductions.
+
