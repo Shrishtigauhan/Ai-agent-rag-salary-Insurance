@@ -1,4 +1,3 @@
-
 import os
 from io import StringIO
 from typing import List
@@ -26,7 +25,6 @@ try:
     asyncio.get_running_loop()
 except RuntimeError:
     asyncio.set_event_loop(asyncio.new_event_loop())
-
 
 
 # ----------------------------
@@ -150,8 +148,6 @@ load_dotenv()
 
 with st.sidebar:
     st.header("⚙️ Setup")
-    
-
     st.divider()
     st.subheader("📄 Knowledge Files")
     salary_file = st.file_uploader("Upload salary.txt", type=["txt"], key="salary_upl")
@@ -198,7 +194,6 @@ with st.sidebar:
 if "messages" not in st.session_state:
     st.session_state["messages"] = []  # list of {role, content}
 if "vectorstore" not in st.session_state:
-    # lazy-build a default VS so the app is usable immediately
     try:
         if os.getenv("GOOGLE_API_KEY"):
             embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
@@ -228,57 +223,57 @@ with col1:
         with st.chat_message(m["role"]):
             st.markdown(m["content"])
 
-    prefill = st.session_state.pop("prefill", "") if "prefill" in st.session_state else ""
-    user_input = st.chat_input( placeholder=prefill or "e.g., What's my net salary after deductions?", key="chat_input")
-    if prefill and not user_input:
-        # allow user to just press Enter
-        user_input = prefill
+# ✅ Chat input placed OUTSIDE columns → fixed at bottom
+prefill = st.session_state.pop("prefill", "") if "prefill" in st.session_state else ""
+user_input = st.chat_input(
+    placeholder=prefill or "e.g., What's my net salary after deductions?",
+    key="chat_input"
+)
+if prefill and not user_input:
+    user_input = prefill
 
-    if user_input:
-        if not os.getenv("GOOGLE_API_KEY"):
-            st.error("Please provide GOOGLE_API_KEY in the sidebar to ask questions.")
-        else:
-            st.session_state["messages"].append({"role": "user", "content": user_input})
-            with st.chat_message("user"):
-                st.markdown(user_input)
+if user_input:
+    if not os.getenv("GOOGLE_API_KEY"):
+        st.error("Please provide GOOGLE_API_KEY in the sidebar to ask questions.")
+    else:
+        st.session_state["messages"].append({"role": "user", "content": user_input})
+        with st.chat_message("user"):
+            st.markdown(user_input)
 
-            # Build LLM and agents lazily when needed
-            llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash", temperature=0.2)
+        # Build LLM and agents lazily when needed
+        llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash", temperature=0.2)
 
-            retriever = st.session_state.get("retriever")
-            if retriever is None:
-                embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
-                vs = build_vector_store([DEFAULT_SALARY_TEXT, DEFAULT_INSURANCE_TEXT], embeddings)
-                retriever = vs.as_retriever(search_kwargs={"k": 4})
-                st.session_state["vectorstore"] = vs
-                st.session_state["retriever"] = retriever
+        retriever = st.session_state.get("retriever")
+        if retriever is None:
+            embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
+            vs = build_vector_store([DEFAULT_SALARY_TEXT, DEFAULT_INSURANCE_TEXT], embeddings)
+            retriever = vs.as_retriever(search_kwargs={"k": 4})
+            st.session_state["vectorstore"] = vs
+            st.session_state["retriever"] = retriever
 
-            salary_agent = build_rag_chain(llm, retriever, SALARY_AGENT_SYSTEM)
-            insurance_agent = build_rag_chain(llm, retriever, INSURANCE_AGENT_SYSTEM)
+        salary_agent = build_rag_chain(llm, retriever, SALARY_AGENT_SYSTEM)
+        insurance_agent = build_rag_chain(llm, retriever, INSURANCE_AGENT_SYSTEM)
 
-            # Route
-            route = classify_query(llm, user_input)
+        # Route
+        route = classify_query(llm, user_input)
 
-            with st.chat_message("assistant"):
-                with st.spinner(f"Coordinator routed to {route.title()} Agent…"):
-                    if route == "SALARY":
-                        res = salary_agent.invoke({"query": user_input})
-                    else:
-                        res = insurance_agent.invoke({"query": user_input})
+        with st.chat_message("assistant"):
+            with st.spinner(f"Coordinator routed to {route.title()} Agent…"):
+                if route == "SALARY":
+                    res = salary_agent.invoke({"query": user_input})
+                else:
+                    res = insurance_agent.invoke({"query": user_input})
 
-                    answer = res.get("result", "Sorry, I couldn't generate an answer.")
-                    st.markdown(answer)
+                answer = res.get("result", "Sorry, I couldn't generate an answer.")
+                st.markdown(answer)
 
-                    # Confirmation: show retrieved chunks from vector store
-                    with st.expander("Show retrieved context (from uploaded files)"):
-                        srcs = res.get("source_documents", []) or []
-                        if not srcs:
-                            st.info("No retrieved context found.")
-                        for i, d in enumerate(srcs, 1):
-                            st.markdown(f"**Chunk {i}:**\n\n{d.page_content}")
+                with st.expander("Show retrieved context (from uploaded files)"):
+                    srcs = res.get("source_documents", []) or []
+                    if not srcs:
+                        st.info("No retrieved context found.")
+                    for i, d in enumerate(srcs, 1):
+                        st.markdown(f"**Chunk {i}:**\n\n{d.page_content}")
 
-            st.session_state["messages"].append({"role": "assistant", "content": answer})
+        st.session_state["messages"].append({"role": "assistant", "content": answer})
 
 st.divider()
-
-
